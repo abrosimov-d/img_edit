@@ -2,6 +2,9 @@ import os
 
 # Exit application
 def quit(app):
+    if app['changes']:
+        if app['yesno_action']['function']('save changes?'):
+            app['save_action']['function'](app)
     print('good bye...')
     os._exit(0)
 

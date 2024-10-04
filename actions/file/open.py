@@ -34,3 +34,4 @@ action = {
 
 def register(app):
     app['actions'].append(action)
+    app['open_action'] = action

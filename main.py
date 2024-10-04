@@ -4,7 +4,7 @@ from actions.image import crop, rotate, scale, mirror, blur, sharp
 
 def main():
     print('welcome to \"1 function = 1 action\" image editor!')
-    app = {'actions':[]}
+    app = {'actions':[], 'changes': False}
     _ = [module.register(app) for module in [helper, open, view, save, close, crop, rotate, scale, mirror, blur, sharp, hello]]
     _ = [print(f'input \'{action['hotkey']}\' for {action['name']}') for action in app['actions']]
     while True:

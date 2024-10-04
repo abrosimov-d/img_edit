@@ -12,5 +12,17 @@ action = {
     'hotkey': 's'
 }
 
+def yesno(message):
+    return 'y' == input(f'{message} \'y\' for yes, \'n\' for no: ')
+
+yesno_action = {
+    'name': 'yesno',
+    'function': yesno,
+    'hotkey': None
+}
+
+
 def register(app):
     app['actions'].append(action)
+    app['save_action'] = action
+    app['yesno_action'] = yesno_action

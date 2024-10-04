@@ -2,7 +2,7 @@ def scale_image(app):
     for filename in app['filenames']:
         print('TODO: scale image ', filename)
 
-scale_image_action = {
+action = {
     'name': 'scale image',
     'function': scale_image,
     'hotkey': '3'
@@ -10,4 +10,4 @@ scale_image_action = {
 
 
 def register(app):
-    app['actions'].append(scale_image_action)
+    app['actions'].append(action)

@@ -2,7 +2,7 @@ def rotate_image(app):
     for filename in app['filenames']:
         print('TODO: rotate image ', filename)
 
-rotate_image_action = {
+action = {
     'name': 'rotate image',
     'function': rotate_image,
     'hotkey': '2'
@@ -10,4 +10,4 @@ rotate_image_action = {
 
 
 def register(app):
-    app['actions'].append(rotate_image_action)
+    app['actions'].append(action)

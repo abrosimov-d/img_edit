@@ -2,7 +2,7 @@ def mirror_image(app):
     for filename in app['filenames']:
         print('TODO: mirror image ', filename)
 
-mirror_image_action = {
+action = {
     'name': 'mirror image',
     'function': mirror_image,
     'hotkey': '4'
@@ -10,4 +10,4 @@ mirror_image_action = {
 
 
 def register(app):
-    app['actions'].append(mirror_image_action)
+    app['actions'].append(action)

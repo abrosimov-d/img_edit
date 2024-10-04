@@ -4,7 +4,7 @@ def hello(app):
 action = {
     'name': 'hello world',
     'function': hello,
-    'hotkey': 'hw'
+    'hotkey': 'w'
 }
 
 def register(app):

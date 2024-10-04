@@ -7,6 +7,5 @@ action = {
     'hotkey': '2'
 }
 
-
 def register(app):
     app['actions'].append(action)

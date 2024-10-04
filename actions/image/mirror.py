@@ -1,5 +1,6 @@
 def mirror_image(app):
     print('TODO: mirror image ')
+    #return cv2.flip(image, 1)
 
 action = {
     'name': 'mirror image(s)',

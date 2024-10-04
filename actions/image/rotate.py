@@ -12,10 +12,7 @@ def rotate_image(app):
         else:
             side = int(side)
 
-        sides = [ROTATE_90_CLOCKWISE, ROTATE_180, ROTATE_90_COUNTERCLOCKWISE]
-        side = sides[side]
-
-        app['images'] = [rotate(image, side) for image in app['images']]
+        app['images'] = [rotate(image, (ROTATE_90_CLOCKWISE, ROTATE_180, ROTATE_90_COUNTERCLOCKWISE)[side]) for image in app['images']]
         
         app['changes'] = True
 

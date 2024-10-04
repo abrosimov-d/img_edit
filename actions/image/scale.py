@@ -1,6 +1,5 @@
 def scale_image(app):
-    for filename in app['filenames']:
-        print('TODO: scale image ', filename)
+    print('TODO: scale image ')
 
 action = {
     'name': 'scale image(s)',

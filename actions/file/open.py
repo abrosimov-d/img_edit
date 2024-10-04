@@ -2,7 +2,7 @@ from os import listdir
 from cv2 import imread, imshow, waitKey, destroyAllWindows
 
 def open_file(app):
-    result = None
+    error = None
     try:
         directory = input('input directory for open file(s) (empty for .\\input): ')
         if directory == '':
@@ -22,8 +22,8 @@ def open_file(app):
                 print(f'open file {filename}')
                 app['images'].append(imread(filename))
     except Exception as e:
-        result = e
-    return result
+        error = e
+    return error
 
 action = {
     'name': 'open file(s)',

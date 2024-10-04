@@ -1,6 +1,5 @@
 def rotate_image(app):
-    for filename in app['filenames']:
-        print('TODO: rotate image ', filename)
+    print('TODO: rotate image ')        
 
 action = {
     'name': 'rotate image(s)',

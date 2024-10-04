@@ -1,6 +1,5 @@
 def mirror_image(app):
-    for filename in app['filenames']:
-        print('TODO: mirror image ', filename)
+    print('TODO: mirror image ')
 
 action = {
     'name': 'mirror image(s)',

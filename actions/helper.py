@@ -17,7 +17,7 @@ quit_action = {
 # Print debug information
 def debug(app):
     print(f'total {len(app['actions'])} actions')
-    print(app['actions'])
+    print(app)
 
 debug_action = {
     'name': 'debug information',

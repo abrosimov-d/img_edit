@@ -6,7 +6,7 @@ def crop_image(app):
     app['changes'] = True
 
 action = {
-    'name': 'crop image',
+    'name': 'crop image(s)',
     'function': crop_image,
     'hotkey': '1'
 }

@@ -3,7 +3,7 @@ def rotate_image(app):
         print('TODO: rotate image ', filename)
 
 action = {
-    'name': 'rotate image',
+    'name': 'rotate image(s)',
     'function': rotate_image,
     'hotkey': '2'
 }

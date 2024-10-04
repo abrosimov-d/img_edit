@@ -3,7 +3,7 @@ def scale_image(app):
         print('TODO: scale image ', filename)
 
 action = {
-    'name': 'scale image',
+    'name': 'scale image(s)',
     'function': scale_image,
     'hotkey': '3'
 }

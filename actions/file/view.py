@@ -7,7 +7,7 @@ def view_file(app):
     destroyAllWindows()
 
 action = {
-    'name': 'view file',
+    'name': 'view file(s)',
     'function': view_file,
     'hotkey': 'v'
 }

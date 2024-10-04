@@ -3,7 +3,7 @@ def mirror_image(app):
         print('TODO: mirror image ', filename)
 
 action = {
-    'name': 'mirror image',
+    'name': 'mirror image(s)',
     'function': mirror_image,
     'hotkey': '4'
 }

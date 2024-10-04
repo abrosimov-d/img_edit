@@ -4,7 +4,7 @@ from cv2 import imread, imshow, waitKey, destroyAllWindows
 def open_file(app):
     result = None
     try:
-        directory = input('input directory (empty for ./input): ')
+        directory = input('input directory for open file(s) (empty for .\\input): ')
         if directory == '':
             directory = '.\\input'
         files = input('input file names separated space (empty for all files in directory): ')
@@ -26,11 +26,10 @@ def open_file(app):
     return result
 
 action = {
-    'name': 'open file',
+    'name': 'open file(s)',
     'function': open_file,
     'hotkey': 'o'
 }
-
 
 def register(app):
     app['actions'].append(action)

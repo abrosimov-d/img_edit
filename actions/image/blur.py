@@ -3,7 +3,7 @@ def blur_image(app):
         print('TODO: blur image ', filename)
 
 action = {
-    'name': 'blur image',
+    'name': 'blur image(s)',
     'function': blur_image,
     'hotkey': '5'
 }

@@ -9,7 +9,7 @@ def sharp_image(app):
     app['images'] = [filter2D(image, -1, UMat(kernel)) for image in app['images']]
 
 action = {
-    'name': 'sharp image',
+    'name': 'sharp image(s)',
     'function': sharp_image,
     'hotkey': '6'
 }

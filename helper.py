@@ -1,5 +1,6 @@
 import os
 
+# Exit application
 def quit(app):
     print('good bye...')
     os._exit(0)
@@ -10,6 +11,7 @@ quit_action = {
     'hotkey': 'q'
 }
 
+# Print debug information
 def debug(app):
     print(f'total {len(app['actions'])} actions')
     print(app['actions'])
@@ -20,6 +22,7 @@ debug_action = {
     'hotkey': 'd'
 }
 
+# Print available actions
 def help(app):
     _ = [print(f'input \'{action['hotkey']}\' for {action['name']}') for action in app['actions']]
 
@@ -29,7 +32,7 @@ help_action = {
     'hotkey': 'h'
 }
 
-
+# Register actions in application
 def register(app):
     app['actions'].append(quit_action)
     app['actions'].append(debug_action)

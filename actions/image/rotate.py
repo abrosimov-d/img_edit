@@ -7,6 +7,7 @@ def rotate_image(app):
             app['open_action']['function'](app)
 
         side = input('input rotate side (0: 90-degree, 1: 180-degree, 2: 270-degree, empty: 90-degree): ')
+
         if side == '':
             side = 0
         else:

@@ -1,4 +1,4 @@
-![Иллюстрация к проекту](https://github.com/abrosimov-d/img_edit/raw/main/input/_69ba9334-1189-4342-b52f-264e142400b9.jpg =250×250)
+![Иллюстрация к проекту](https://github.com/abrosimov-d/img_edit/raw/main/img_edit.jpg)
 
 # img_edit
 

@@ -11,20 +11,20 @@ def scale_image(app):
             value = '150%'
         
         if value.find('px') > 0:
-            print('px')
+            max_size = max(app['images'][0].shape[:2])
+            scale = int(value.replace('px', '')) / max_size
         elif value.find('%') > 0:
-            print('%')
+            scale = int(value.replace('%', '')) / 100
         else:
             error = f'wrong input: {value}'
 
+        app['images'] = [resize(image, None, fx=scale, fy=scale) for image in app['images']]
         app['changes'] = True
     
     except Exception as e:
         error = e
     
     return error
-
-    #return cv2.resize(image, None, fx=scale, fy=scale)
 
 action = {
     'name': 'scale image(s)',

@@ -23,9 +23,12 @@ def open_file(app):
         if not 'images' in app:
             app['images'] = []
             for filename in app['filenames']:
-                print(f'open file {filename}')
                 if path.isfile(filename):
-                    app['images'].append(imread(filename))
+                    image = imread(filename)
+                    app['images'].append(image)
+                    print(f'open file {filename} ({image.shape[0]}px x {image.shape[1]}px)')
+
+
                 else:
                     if error == None:
                         error = ''

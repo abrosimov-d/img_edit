@@ -8,7 +8,6 @@ def blur_image(app):
             if error != None:
                 return error
 
-
         radius = input('input gaussian blur radius (positive odd integer, empty for default 13): ')
         if radius == '':
             radius = 13

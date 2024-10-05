@@ -1,4 +1,4 @@
-import os
+import os, sys
 
 # Exit application
 def quit(app):
@@ -17,7 +17,6 @@ quit_action = {
 # Print debug information
 def debug(app):
     print(f'total {len(app['actions'])} actions')
-    print(app)
 
 debug_action = {
     'name': 'debug information',

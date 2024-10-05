@@ -2,7 +2,9 @@ from os import listdir, path
 from cv2 import imread
 
 def open_file(app):
+    
     error = None
+    
     try:
         directory = input('input directory for open file(s) (empty for .\\input): ')
         if directory == '':
@@ -27,8 +29,6 @@ def open_file(app):
                     image = imread(filename)
                     app['images'].append(image)
                     print(f'open file {filename} ({image.shape[0]}px x {image.shape[1]}px)')
-
-
                 else:
                     if error == None:
                         error = ''

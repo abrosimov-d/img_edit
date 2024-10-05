@@ -1,4 +1,4 @@
-from os import listdir
+from os import listdir, path
 from cv2 import imread, imshow, waitKey, destroyAllWindows
 
 def open_file(app):
@@ -7,6 +7,7 @@ def open_file(app):
         directory = input('input directory for open file(s) (empty for .\\input): ')
         if directory == '':
             directory = '.\\input'
+            
         files = input('input file names separated space (empty for all files in directory): ')
         if files == '':
             files = listdir(directory)
@@ -16,11 +17,18 @@ def open_file(app):
             app['filenames'] = []
             for file in files:
                 app['filenames'].append(f'{directory}\\{file}')
+
         if not 'images' in app:
             app['images'] = []
             for filename in app['filenames']:
                 print(f'open file {filename}')
-                app['images'].append(imread(filename))
+                if path.isfile(filename):
+                    app['images'].append(imread(filename))
+                else:
+                    if error == None:
+                        error = ''
+                    error += f'\nerror open file: {filename}'
+
     except Exception as e:
         error = e
     return error

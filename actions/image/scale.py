@@ -4,7 +4,9 @@ def scale_image(app):
     error = None
     try:
         if 'images' not in app:
-            app['open_action']['function'](app)
+            error = app['open_action']['function'](app)
+            if error != None:
+                return error
 
         value = input('input new size in px for long side (ex. 2000px) or scale factor in % (ex. 150%), (empty for 150%): ').replace(' ', '')
         if value == '':

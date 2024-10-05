@@ -4,7 +4,10 @@ def blur_image(app):
     error = None
     try:
         if 'images' not in app:
-            app['open_action']['function'](app)
+            error = app['open_action']['function'](app)
+            if error != None:
+                return error
+
 
         radius = input('input gaussian blur radius (positive odd integer, empty for default 13): ')
         if radius == '':

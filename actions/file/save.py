@@ -1,4 +1,4 @@
-from os import path, makedirs
+from os import path, makedirs, sep
 from cv2 import imwrite
 from datetime import datetime
 
@@ -11,16 +11,16 @@ def save_file(app):
         if not 'images' in app:
             app['open_action']['function'](app)
 
-        directory = input('input directory for save file(s) (empty for .\\output): ')
+        directory = input(f'input directory for save file(s) (empty for .{sep}output): ')
         if directory == '':
-            directory = '.\\output'
+            directory = f'.{sep}output'
 
         savefilenames = input(f'input {len(app['filenames'])} file names separated space: (empty for add timestamp): ').split(' ')
         timestamp = datetime.now().strftime("%d.%m-%H.%M")
         if len(savefilenames) != len(app['filenames']):
-            savefilenames = [f'{directory}\\{path.basename(filename).replace('.', f'-{timestamp}.')}' for filename in app['filenames']]
+            savefilenames = [f'{directory}{sep}{path.basename(filename).replace('.', f'-{timestamp}.')}' for filename in app['filenames']]
         else:
-            savefilenames = [f'{directory}\\{filename}' for filename in savefilenames]
+            savefilenames = [f'{directory}{sep}{filename}' for filename in savefilenames]
 
         if not path.exists(directory):
             makedirs(directory)

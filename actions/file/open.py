@@ -1,4 +1,4 @@
-from os import listdir, path
+from os import listdir, path, sep
 from cv2 import imread
 
 def open_file(app):
@@ -6,9 +6,9 @@ def open_file(app):
     error = None
     
     try:
-        directory = input('input directory for open file(s) (empty for .\\input): ')
+        directory = input(f'input directory for open file(s) (empty for .{sep}input): ')
         if directory == '':
-            directory = '.\\input'
+            directory = f'.{sep}input'
             
         files = input('input file names separated space (empty for all files in directory): ')
         if files == '':
@@ -20,7 +20,7 @@ def open_file(app):
             app['filenames'] = []
 
         for file in files:
-            app['filenames'].append(f'{directory}\\{file}')
+            app['filenames'].append(f'{directory}{sep}{file}')
 
         if not 'images' in app:
             app['images'] = []

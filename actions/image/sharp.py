@@ -14,6 +14,7 @@ def sharp_image(app):
         kernel = array([[0, -1, 0], [-1, 5,-1],[0, -1, 0]])
 
         app['images'] = [filter2D(image, -1, kernel) for image in app['images']]
+        app['changes'] = True
 
     except Exception as e:
         error = e

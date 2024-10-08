@@ -1,11 +1,11 @@
 from actions import about, helper
-from actions.file import open, view, save, close
+from actions.file import open, view, save
 from actions.image import crop, rotate, scale, mirror, blur, sharp
 
 def main():
     print('\nwelcome to \"1 function = 1 action\" image editor!')
     app = {'actions':[], 'changes': False}
-    _ = [module.register(app) for module in [helper, open, view, save, close, crop, rotate, scale, mirror, blur, sharp, about]]
+    _ = [module.register(app) for module in [helper, open, view, save, crop, rotate, scale, mirror, blur, sharp, about]]
     _ = [print(f'input \'{action['hotkey']}\' for {action['name']}') for action in app['actions']]
     while True:
         try:
